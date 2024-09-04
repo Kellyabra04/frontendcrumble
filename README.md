@@ -37,14 +37,14 @@ https://nl.pinterest.com/
 
 #### Screenshot(s) van de eerste pagina (small screen):
 
-hier de naam van de pagina  
+Pinterest homepage  
  <img src="readme-images/pinterestdesktophome.jpg" width="375px" alt="Pinterest homepage op desktop">
 <img src="readme-images/pinterestphonehome.jpeg" width="375px" alt="Pinterest homepage op telefoon">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
-hier de naam van de pagina  
- <img src="readme-images/detailspaginadesktop.png" width="375px" alt="Pinterest detailpagina op desktop">
+Pinterest detailspagina
+<img src="readme-images/detailspaginadesktop.png" width="375px" alt="Pinterest detailpagina op desktop">
 <img src="readme-images//detailspaginaphone.jpeg" width="375px" alt="Pinterest detailpagina op telefoon">
 
 </details>
