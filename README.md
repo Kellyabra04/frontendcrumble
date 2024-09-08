@@ -37,13 +37,13 @@ https://crumblcookies.com/
 
 #### Screenshot(s) van de eerste pagina (small screen):
 
-Pinterest homepage  
+Crumbl homepage  
  <img src="readme-images/crumbldesktophome.png" width="375px" alt="Crumble homepage op desktop">
 <img src="readme-images/crumblphonehome.jpeg" width="375px" alt="Crumble homepage op telefoon">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
-Pinterest detailspagina
+Crumbl detailspagina
 <img src="readme-images/detailspaginadesktopcrumble.png" width="375px" alt="Crumble detailpagina op desktop">
 <img src="readme-images/detailspaginaphonecrumble.jpeg" width="375px" alt="Crumble detailpagina op telefoon">
 
