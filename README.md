@@ -58,6 +58,10 @@ Crumbl detailspagina
 
 Lijst met je bevindingen die in de test naar voren kwamen:
 
+- screenreader leest alle headers voor en dat word irritant en verwarrend
+- voor iemand die niet gewoon is om een screanreader te gebruiken is het moeilijk om te gebruiken
+- je zou denken dat beroemde merken, websites hebben zonder foutmeldingen maar de mijne had er wel een aantal
+
 </details>
 
 ## Breakdownschets (week 1)

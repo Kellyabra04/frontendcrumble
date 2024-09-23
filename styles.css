@@ -1,0 +1,386 @@
+/*************/
+/*FONT FACES */
+/*************/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Baloo2";
+  src: url("fonts/Baloo2-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LexendDeca";
+  src: url("fonts/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  color: #000;
+  line-height: 1.5;
+}
+
+/*************/
+/*HEADER STYLING */
+/*************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3% 9%;
+  background-color: #feb9cd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* crumbl logo */
+header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Baloo2", "Helvetica", "Arial", sans-serif;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger menu */
+header div button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin-right: 1%;
+  margin-left: -20%;
+  color: black;
+}
+
+/* hamburger Hover State */
+header div button:hover {
+  background-color: #feb9cd;
+  color: #a8763a;
+}
+
+/* hamburger Focus State */
+header div button:focus {
+  outline: 0.2% dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: -0.25em; /* Offset for visual space around the outline */
+}
+
+/* hamburger Active State */
+header div button:active {
+  background-color: #feb9cd;
+  color: #bcb6b6;
+}
+
+/* header order now button */
+header button {
+  padding: 3% 5%;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1em;
+  border-radius: 0.4em;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+/* order now Hover State */
+header button:hover {
+  background-color: #333;
+  color: #ddd;
+}
+
+/* order now Focus State */
+header button:focus {
+  outline: 5px dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: 4px; /* Offset for visual space around the outline */
+}
+
+/* order now Active State */
+header button:active {
+  background-color: #857878;
+  color: #000000;
+}
+
+/*************/
+/*COOKIES VIDEO  */
+/*************/
+section video {
+  width: 100%; /* Full width */
+  height: 450px; /* Custom height, adjust to your preference */
+  object-fit: cover; /* Ensures the video covers the area without distortion */
+  display: block; /* Prevent inline spacing issues */
+}
+
+/*************/
+/*DATE */
+/*************/
+
+section:nth-of-type(2) p {
+  background-color: #feb9cd;
+  padding: 2%;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.9em;
+  margin: 5% 0;
+  margin-right: 60%;
+  margin-left: 7%;
+  border-radius: 0.7em;
+}
+
+/* date Focus State */
+section:nth-of-type(2) p:focus {
+  outline: 3px dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: 4px; /* Offset for visual space around the outline */
+  background-color: #fca4c2; /* Slight change in background color on focus */
+}
+
+/*************/
+/*NATIONAL FLAVORS HEADER */
+/*************/
+
+section:nth-of-type(2) h2 {
+  font-family: "LexendDeca", "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  font-size: 2.2em;
+
+  margin: 3% 0;
+}
+
+/* header Focus State */
+section:nth-of-type(2) h2:focus {
+  outline: 3px dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: 4px; /* Offset for visual space around the outline */
+}
+
+/*************/
+/*COOKIE SECTIONS */
+/*************/
+
+section:nth-of-type(2) div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+section:nth-of-type(2) article {
+  text-align: center;
+  width: 9.4em;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cookie images */
+section:nth-of-type(2) article img {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+}
+
+/* Cookie names */
+section:nth-of-type(2) article h3 {
+  font-size: 1.1em;
+  margin: 6% 0;
+}
+
+/* Cookie learn more */
+section:nth-of-type(2) article a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9em;
+  display: inline-block;
+  margin-top: 5%;
+}
+
+/* Hover effect for different flavors */
+section:nth-of-type(2) article:nth-of-type(1):hover {
+  background-color: #7a4f39; /* choco chip */
+}
+
+section:nth-of-type(2) article:nth-of-type(2):hover {
+  background-color: #9b3c20; /* maple cinnamon */
+}
+
+section:nth-of-type(2) article:nth-of-type(3):hover {
+  background-color: #850605; /* Raspberry cheese */
+}
+
+section:nth-of-type(2) article:nth-of-type(4):hover {
+  background-color: #563829; /* brownie batter */
+}
+
+section:nth-of-type(2) article:nth-of-type(5):hover {
+  background-color: #f58461; /* Caramel pump */
+}
+
+section:nth-of-type(2) article:nth-of-type(6):hover {
+  background-color: #d5853d; /* Fried ice cream */
+}
+
+section:nth-of-type(2) article:hover {
+  padding: 0.6%;
+  border-radius: 1em;
+  transform: scale(1.05);
+}
+
+/* Cookie info whole hover */
+section:nth-of-type(2) article:hover h3,
+section:nth-of-type(2) article:hover a {
+  color: #ffffff;
+}
+
+/*************/
+/*  FOOTER   */
+/*************/
+
+footer {
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+footer div:first-of-type p {
+  font-weight: bold;
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding-left: 2.5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+footer div:nth-of-type(2) a {
+  margin: 0 0.6em;
+  color: black;
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+/* Pink crumbl footer section */
+footer div:nth-of-type(3) {
+  background-color: #feb9cd; /* Pink background for the last section */
+  padding: 2em 0;
+  text-align: center;
+}
+
+/* Crumbl logo */
+footer div:nth-of-type(3) h1 {
+  font-family: "Baloo2", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  color: black;
+  margin-bottom: 0.1em;
+}
+
+/* Footer meta data */
+footer div:nth-of-type(3) p {
+  font-size: 0.9em;
+  margin: 0.5em 0;
+  color: black;
+}
+
+/* Footer links */
+footer div:nth-of-type(3) a {
+  text-decoration: none;
+  color: black;
+}
+
+footer div:nth-of-type(3) a:hover {
+  text-decoration: underline;
+}
+
+/* Hover and pseudo effects */
+button:hover,
+a:hover {
+  opacity: 0.8;
+}
+
+a:after {
+  content: " ›";
+}
+/* Media Queries for larger screens */
+/* Media Queries for larger screens */
+/* Media Queries for larger screens */
+/* Media Queries for larger screens */
+/* Media Queries for larger screens */
+/* Media Queries for larger screens */
+@media (min-width: 1024px) {
+  header {
+    padding: 0.4% 5%; /* Reduces the padding for wide screens */
+  }
+
+  /* Adjusting the font size of the header */
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  /* Adjusting the button to be smaller */
+  header button {
+    padding: 1% 2.5%;
+    font-size: 0.9em;
+    border-radius: 2em;
+  }
+
+  /* date */
+  section:nth-of-type(2) p {
+    padding: 0.7%;
+    font-size: 1.2em;
+
+    margin: 7% 0;
+    margin-right: 82%;
+    margin-left: 2%;
+    border-radius: 0.7em;
+  }
+
+  /* National flavors */
+  section:nth-of-type(2) h2 {
+    font-size: 5.5em;
+    text-align: start;
+    margin-left: 0.4em;
+  }
+  /* National flavors */
+  /* National flavors */
+  /* National flavors */
+  section:nth-of-type(2) article {
+    width: 200px;
+  }
+
+  section:nth-of-type(2) article h3 {
+    font-size: 20px;
+  }
+}
