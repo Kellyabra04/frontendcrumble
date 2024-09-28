@@ -37,6 +37,16 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: #f47b9d;
+  color: white;
+}
+
+*:focus {
+  outline: 5px dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: 4px; /* Offset for visual space around the outline */
+}
+
 /* Basic styling */
 body {
   font-family: "Arial", sans-serif;
@@ -120,16 +130,76 @@ header button:hover {
   color: #ddd;
 }
 
-/* order now Focus State */
-header button:focus {
-  outline: 5px dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: 4px; /* Offset for visual space around the outline */
-}
-
 /* order now Active State */
 header button:active {
   background-color: #857878;
   color: #000000;
+}
+
+/*************/
+/*NAVIGATION MENU */
+/*************/
+
+/* Ensure the nav is above all other elements */
+nav {
+  position: fixed;
+  top: 4.5em;
+  left: -100%; /* Start hidden offscreen */
+  width: 60%;
+  height: 100%;
+  background-color: rgb(255, 241, 253);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  z-index: 100; /* Ensure it's above other content */
+  transition: left 0.3s ease;
+}
+
+/* X button */
+nav button {
+  align-self: flex-end;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101; /* Ensure the button is above everything */
+}
+
+/* Add space for the "Sign in" link */
+nav ul li:first-of-type {
+  margin-top: -2.4rem;
+  margin-bottom: 4rem; /* Add more space below the "Sign in" link */
+}
+
+/* Styling for the ul and li */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: -1rem;
+}
+
+/* Space between menu items */
+nav li {
+  margin: 1rem 0;
+}
+
+/* Menu items styling */
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  font-family: "LexendDeca", "Helvetica", "Arial", sans-serif;
+}
+
+/* Show the menu when it slides in */
+nav[aria-expanded="true"] {
+  left: 0; /* Move the menu into view */
+}
+
+/* When the menu is not expanded (hidden) */
+nav[aria-expanded="false"] {
+  left: -100%; /* Move it back offscreen */
 }
 
 /*************/
@@ -159,13 +229,6 @@ section:nth-of-type(2) p {
   border-radius: 0.7em;
 }
 
-/* date Focus State */
-section:nth-of-type(2) p:focus {
-  outline: 3px dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: 4px; /* Offset for visual space around the outline */
-  background-color: #fca4c2; /* Slight change in background color on focus */
-}
-
 /*************/
 /*NATIONAL FLAVORS HEADER */
 /*************/
@@ -176,12 +239,6 @@ section:nth-of-type(2) h2 {
   font-size: 2.2em;
 
   margin: 3% 0;
-}
-
-/* header Focus State */
-section:nth-of-type(2) h2:focus {
-  outline: 3px dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: 4px; /* Offset for visual space around the outline */
 }
 
 /*************/
@@ -351,6 +408,15 @@ a:hover {
     padding: 1% 2.5%;
     font-size: 0.9em;
     border-radius: 2em;
+  }
+
+  nav {
+    top: 4.45em;
+    width: 25%;
+  }
+
+  nav a {
+    font-size: 2rem;
   }
 
   /* date */

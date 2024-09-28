@@ -37,6 +37,16 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: #f47b9d;
+  color: white;
+}
+
+*:focus {
+  outline: 5px dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: 4px; /* Offset for visual space around the outline */
+}
+
 /* Basic styling */
 body {
   font-family: "Arial", sans-serif;
@@ -137,31 +147,40 @@ header button:active {
 /*************/
 /* Product section styling */
 section {
-  padding: 40px 20px;
+  padding: 5% 3.5%;
 }
 
 section:first-of-type {
   background-color: #eaac5b; /* Light orange color */
-  padding: 40px 20px;
+  padding: 7% 4%;
 }
 
+/* Served warm */
 section div p:first-child {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #000000;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  margin-top: -1em;
 }
 
+/* Milk Chocolate Chip */
 h2 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #000000;
+  font-family: "LexendDeca", "Helvetica", "Arial", sans-serif;
 }
 
-section div p:nth-child(3) {
+/* The classic- you can't... */
+section:nth-of-type(1) div p:nth-child(3) {
   font-size: 1rem;
   color: #000000;
   margin: 20px 0;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  margin-top: 0.1rem;
 }
 
+/* Add To favorites */
 section:first-of-type button {
   background-color: #eaac5b; /* Customize styles */
   color: rgb(0, 0, 0);
@@ -169,12 +188,58 @@ section:first-of-type button {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 2em;
   cursor: pointer;
+  margin-top: 0.5em;
 }
 
 section:first-of-type button:hover {
   background-color: #e68a00; /* Change on hover */
 }
 
+/* Cookie foto */
+section img {
+  width: 70%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Sterren */
+section div div span {
+  font-size: 2rem;
+}
+
+/* Top reviews */
+section:nth-of-type(2) h1 {
+  font-size: 2rem;
+  font-family: "LexendDeca", "Helvetica", "Arial", sans-serif;
+}
+
+/* Based on the... */
+section:nth-of-type(2) p {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  margin-top: 0.3em;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+}
+
+/* review message */
+section:nth-of-type(2) div p:first-child {
+  font-size: 1rem;
+  color: red;
+  margin-top: 2em;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  margin-left: 1rem;
+}
+
+/* reviewer name */
+section:nth-of-type(2) div p:last-child {
+  font-size: 0.7rem;
+  color: #2dca18;
+  margin-top: 10px;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  margin-left: 1.2rem;
+}
+
+/* Download the App button */
 button {
   background-color: #000000;
   color: white;
@@ -190,37 +255,6 @@ button:hover {
   background-color: #555;
 }
 
-section div div {
-  margin: 20px 0;
-}
-
-section div div span {
-  font-size: 2rem;
-}
-
-img {
-  width: 200px;
-  height: auto;
-  margin: 20px 0;
-}
-
-/* Reviews section */
-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-section div div p:first-child {
-  font-size: 1rem;
-  font-style: italic;
-}
-
-section div div p:last-child {
-  font-size: 0.9rem;
-  color: #000000;
-  margin-top: 10px;
-}
-
 /* Footer button */
 footer {
   display: flex;
@@ -228,6 +262,7 @@ footer {
   align-items: center; /* Centers the button vertically if needed */
 }
 
+/* Order now */
 footer button {
   background-color: #000000;
   color: white;
@@ -238,11 +273,21 @@ footer button {
   cursor: pointer;
   margin-top: 4em;
   width: 100%; /* Full width of the parent container */
-  max-width: 90%; /* Optional: Set a max-width if you don't want it too wide */
+  max-width: 90%;
 }
 
 footer button:hover {
   background-color: #998f80;
+}
+
+footer button:focus {
+  outline: 3px dotted #ff69b4; /* Dotted outline for focus */
+  outline-offset: 4px; /* Offset for visual space around the outline */
+}
+
+footer button:active {
+  color: #333;
+  background-color: #ffffff;
 }
 
 /* Media Queries for larger screens */

@@ -22,7 +22,7 @@ Blauw
 
 #### Je focus:
 
-Surface plane
+Responsive plane
 
 </details>
 
@@ -106,10 +106,8 @@ samen met je groepje opstellen
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik moet me eerst concentreren op alle content erin te stoppen
+- Het moet niet excat eruit zien zoals de echte
 
 </details>
 
