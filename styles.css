@@ -64,11 +64,12 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 3% 9%;
+  padding: 4% 9%;
   background-color: #feb9cd;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* crumbl logo */
@@ -102,8 +103,8 @@ header div button:hover {
 
 /* hamburger Focus State */
 header div button:focus {
-  outline: 0.2% dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: -0.25em; /* Offset for visual space around the outline */
+  outline: 0.2% dotted #ff69b4;
+  outline-offset: -0.25em;
 }
 
 /* hamburger Active State */
@@ -113,7 +114,7 @@ header div button:active {
 }
 
 /* header order now button */
-header button {
+header a {
   padding: 3% 5%;
   background-color: black;
   color: white;
@@ -122,16 +123,17 @@ header button {
   border-radius: 2em;
   font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
+  text-decoration: none;
 }
 
 /* order now Hover State */
-header button:hover {
+header a:hover {
   background-color: #333;
   color: #ddd;
 }
 
 /* order now Active State */
-header button:active {
+header a:active {
   background-color: #857878;
   color: #000000;
 }
@@ -140,10 +142,10 @@ header button:active {
 /*NAVIGATION MENU */
 /*************/
 
-/* Ensure the nav is above all other elements */
+/*  nav is above all other elements */
 nav {
   position: fixed;
-  top: 4.5em;
+  top: 4.9em;
   left: -100%; /* Start hidden offscreen */
   width: 60%;
   height: 100%;
@@ -162,13 +164,13 @@ nav button {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 101; /* Ensure the button is above everything */
+  z-index: 101;
 }
 
 /* Add space for the "Sign in" link */
 nav ul li:first-of-type {
   margin-top: -2.4rem;
-  margin-bottom: 4rem; /* Add more space below the "Sign in" link */
+  margin-bottom: 4rem; /* space below the Sign in */
 }
 
 /* Styling for the ul and li */
@@ -207,9 +209,9 @@ nav[aria-expanded="false"] {
 /*************/
 section video {
   width: 100%; /* Full width */
-  height: 450px; /* Custom height, adjust to your preference */
-  object-fit: cover; /* Ensures the video covers the area without distortion */
-  display: block; /* Prevent inline spacing issues */
+  height: 28rem;
+  object-fit: cover;
+  display: block;
 }
 
 /*************/
@@ -328,19 +330,29 @@ footer {
 }
 
 footer div:first-of-type p {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   margin: 1em 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  padding-left: 2.5em;
-  padding-top: 2em;
+  display: flex; /* Flex container for the text and the "+" */
+  justify-content: space-between; /* Push "+" to the right */
+  align-items: center;
+  width: 100%; /* Make sure p takes up full width */
+  padding-left: 2.5em; /* Adjust padding as needed */
+  padding-top: 2.2em;
   padding-bottom: 2em;
+}
+
+footer div:first-of-type p::after {
+  content: "+";
+  font-weight: bold;
+  margin-left: 0; /* No extra margin */
+  margin-right: 2em; /* Ensure the "+" is pushed to the right */
+  font-size: 1.6rem;
 }
 
 footer div:nth-of-type(2) a {
   margin: 0 0.6em;
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -350,7 +362,7 @@ footer p {
 
 /* Pink crumbl footer section */
 footer div:nth-of-type(3) {
-  background-color: #feb9cd; /* Pink background for the last section */
+  background-color: #feb9cd;
   padding: 2em 0;
   text-align: center;
 }
@@ -395,7 +407,7 @@ a:hover {
 /* Media Queries for larger screens */
 @media (min-width: 1024px) {
   header {
-    padding: 0.4% 5%; /* Reduces the padding for wide screens */
+    padding: 0.4% 5%; /* Reduces padding wide screens */
   }
 
   /* Adjusting the font size of the header */
@@ -404,8 +416,8 @@ a:hover {
   }
 
   /* Adjusting the button to be smaller */
-  header button {
-    padding: 1% 2.5%;
+  header a {
+    padding: 1% 2%;
     font-size: 0.9em;
     border-radius: 2em;
   }
@@ -437,13 +449,11 @@ a:hover {
     margin-left: 0.4em;
   }
   /* National flavors */
-  /* National flavors */
-  /* National flavors */
   section:nth-of-type(2) article {
-    width: 200px;
+    width: 12em;
   }
 
   section:nth-of-type(2) article h3 {
-    font-size: 20px;
+    font-size: 1em;
   }
 }

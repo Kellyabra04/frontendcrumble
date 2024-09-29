@@ -43,8 +43,8 @@
 }
 
 *:focus {
-  outline: 5px dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: 4px; /* Offset for visual space around the outline */
+  outline: 5px dotted #ff69b4;
+  outline-offset: 4px;
 }
 
 /* Basic styling */
@@ -69,6 +69,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* crumbl logo */
@@ -94,26 +95,8 @@ header div button {
   color: black;
 }
 
-/* hamburger Hover State */
-header div button:hover {
-  background-color: #ffffff;
-  color: #a8763a;
-}
-
-/* hamburger Focus State */
-header div button:focus {
-  outline: 0.2% dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: -0.25em; /* Offset for visual space around the outline */
-}
-
-/* hamburger Active State */
-header div button:active {
-  background-color: #feb9cd;
-  color: #bcb6b6;
-}
-
 /* header order now button */
-header button {
+header a {
   padding: 3% 5%;
   background-color: black;
   color: white;
@@ -122,44 +105,109 @@ header button {
   border-radius: 2em;
   font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
+  text-decoration: none;
 }
 
 /* order now Hover State */
-header button:hover {
+header a:hover {
   background-color: #333;
   color: #ddd;
 }
 
-/* order now Focus State */
-header button:focus {
-  outline: 5px dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: 4px; /* Offset for visual space around the outline */
-}
-
 /* order now Active State */
-header button:active {
+header a:active {
   background-color: #857878;
   color: #000000;
 }
 
 /*************/
-/*section */
+/*NAVIGATION MENU */
 /*************/
-/* Product section styling */
+
+/* Ensure the nav is above all other elements */
+nav {
+  position: fixed;
+  top: 4.4em;
+  left: -100%; /* Start hidden offscreen */
+  width: 60%;
+  height: 100%;
+  background-color: rgb(255, 241, 253);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  z-index: 100; /* Ensure it's above other content */
+  transition: left 0.3s ease;
+}
+
+/* X button */
+nav button {
+  align-self: flex-end;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101; /* Ensure the button is above everything */
+}
+
+/* Add space for the "Sign in" link */
+nav ul li:first-of-type {
+  margin-top: -2.4rem;
+  margin-bottom: 4rem; /* Add more space below the "Sign in" link */
+}
+
+/* Styling for the ul and li */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: -1rem;
+}
+
+/* Space between menu items */
+nav li {
+  margin: 1rem 0;
+}
+
+/* Menu items styling */
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  font-family: "LexendDeca", "Helvetica", "Arial", sans-serif;
+}
+
+/* Show the menu when it slides in */
+nav[aria-expanded="true"] {
+  left: 0; /* Move the menu into view */
+}
+
+/* When the menu is not expanded (hidden) */
+nav[aria-expanded="false"] {
+  left: -100%; /* Move it back offscreen */
+}
+
+/*************/
+/* section 1 */
+/*************/
 section {
   padding: 5% 3.5%;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
 }
 
 section:first-of-type {
-  background-color: #eaac5b; /* Light orange color */
+  background-color: #eaac5b;
   padding: 7% 4%;
+  display: block; /* Stack layout for mobile */
 }
 
-/* Served warm */
-section div p:first-child {
+section:first-of-type div {
+  margin-top: 2em;
+}
+
+/* Served warm text */
+section:first-of-type div p:first-child {
   font-size: 0.8rem;
   color: #000000;
-  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   margin-top: -1em;
 }
 
@@ -171,40 +219,58 @@ h2 {
   font-family: "LexendDeca", "Helvetica", "Arial", sans-serif;
 }
 
-/* The classic- you can't... */
+/* Description */
 section:nth-of-type(1) div p:nth-child(3) {
   font-size: 1rem;
   color: #000000;
-  margin: 20px 0;
-  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
-  margin-top: 0.1rem;
+  margin: 1em 0;
 }
 
 /* Add To favorites */
-section:first-of-type button {
-  background-color: #eaac5b; /* Customize styles */
+section:nth-of-type(1) button {
+  background-color: #eaac5b;
   color: rgb(0, 0, 0);
-  padding: 10px 20px;
-  border: 2px solid rgb(0, 0, 0);
+  padding: 2% 3%;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 2em;
   cursor: pointer;
-  margin-top: 0.5em;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
-section:first-of-type button:hover {
-  background-color: #e68a00; /* Change on hover */
+section:nth-of-type(1) button:hover {
+  background-color: #feb9cd;
 }
 
-/* Cookie foto */
+section:nth-of-type(1) button:focus {
+  outline: 3px dotted #ff69b4;
+  outline-offset: 4px;
+}
+
+section:nth-of-type(1) button:active {
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* Cookie image */
 section img {
-  width: 70%;
+  width: 100%;
   height: auto;
-  margin: 20px 0;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-/* Sterren */
+/* Ratings */
 section div div span {
   font-size: 2rem;
+}
+
+/*************/
+/* section 2 */
+/*************/
+
+section:nth-of-type(2) {
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
 }
 
 /* Top reviews */
@@ -218,52 +284,91 @@ section:nth-of-type(2) p {
   font-size: 1rem;
   color: rgb(0, 0, 0);
   margin-top: 0.3em;
-  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
 }
 
 /* review message */
 section:nth-of-type(2) div p:first-child {
   font-size: 1rem;
-  color: red;
+  color: rgb(0, 0, 0);
   margin-top: 2em;
-  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   margin-left: 1rem;
 }
 
 /* reviewer name */
 section:nth-of-type(2) div p:last-child {
   font-size: 0.7rem;
-  color: #2dca18;
-  margin-top: 10px;
-  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  color: #000000;
+  margin-top: 0.8em;
   margin-left: 1.2rem;
 }
 
+/*************/
+/* section 3 */
+/*************/
+
+section:nth-of-type(3) {
+  text-align: center;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  margin-top: 4%;
+}
+
+/* Tried this cookie? */
+section:nth-of-type(3) p:first-of-type {
+  font-weight: 700;
+  margin-bottom: 4%;
+}
+
 /* Download the App button */
-button {
+section:nth-of-type(3) a {
   background-color: #000000;
   color: white;
-  padding: 10px 20px;
+  padding: 2% 6%;
   border: none;
-  cursor: pointer;
-  margin: 10px 0;
   border-radius: 2em;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 4em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+section:nth-of-type(3) a:hover {
+  background-color: #333333;
+}
+
+/* Allergy and Nutrition Information */
+section:nth-of-type(3) p:nth-of-type(2),
+section:nth-of-type(3) p:nth-of-type(3) {
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 1.1em;
+  width: 90%;
+  margin: 0 auto 0.7em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.8em;
+  font-weight: 700;
+}
+
+/* Add a down arrow */
+section:nth-of-type(3) p:nth-of-type(2)::after,
+section:nth-of-type(3) p:nth-of-type(3)::after {
+  content: "▼";
   font-size: 1.2em;
 }
 
-button:hover {
-  background-color: #555;
-}
-
+/*************/
 /* Footer button */
+/*************/
 footer {
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
-  align-items: center; /* Centers the button vertically if needed */
+  justify-content: center;
 }
 
-/* Order now */
-footer button {
+footer a {
   background-color: #000000;
   color: white;
   padding: 2%;
@@ -271,45 +376,82 @@ footer button {
   border: none;
   border-radius: 2em;
   cursor: pointer;
-  margin-top: 4em;
-  width: 100%; /* Full width of the parent container */
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  width: 100%;
   max-width: 90%;
+  text-decoration: none;
+
+  display: flex; /* Enables flexbox on the button */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
 }
 
-footer button:hover {
+footer a:hover {
   background-color: #998f80;
 }
 
-footer button:focus {
-  outline: 3px dotted #ff69b4; /* Dotted outline for focus */
-  outline-offset: 4px; /* Offset for visual space around the outline */
-}
-
-footer button:active {
+footer a:active {
   color: #333;
   background-color: #ffffff;
 }
 
-/* Media Queries for larger screens */
-/* Media Queries for larger screens */
-/* Media Queries for larger screens */
-/* Media Queries for larger screens */
-/* Media Queries for larger screens */
-/* Media Queries for larger screens */
+/*************/
+/* MEDIA QUERIES for Desktop */
+/*************/
+
 @media (min-width: 1024px) {
   header {
-    padding: 0.4% 5%; /* Reduces the padding for wide screens */
+    padding: 0.4% 5%;
   }
 
-  /* Adjusting the font size of the header */
   header h1 {
     font-size: 2.5em;
   }
 
-  /* Adjusting the button to be smaller */
-  header button {
+  header a {
     padding: 1% 2.5%;
     font-size: 0.9em;
     border-radius: 2em;
+  }
+
+  /* Section 1 (Product) using Grid for desktop */
+  section:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2em; /* Add spacing between the columns */
+    align-items: center; /* Center items vertically */
+  }
+
+  /* Cookie image in the first column */
+  section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    grid-column: 1;
+    margin-top: -4em;
+  }
+
+  /* Text content in the second column */
+  section:first-of-type div {
+    grid-column: 2;
+    text-align: left; /* Keep the text aligned to the left */
+    margin-top: 3em;
+  }
+
+  /* Served warm text */
+  section:first-of-type div p:first-child {
+    margin-top: -10em;
+  }
+
+  /* Add to favorites */
+  section:first-of-type a {
+    margin-top: 1.5rem;
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  section div div span {
+    font-size: 3rem;
   }
 }
