@@ -1,3 +1,6 @@
+// 10 uitleg dat `aria-expanded` helpt om schermlezers te laten weten of een menu open of dicht is.(https://www.a11y-collective.com/blog/aria-expanded/)
+// 15 ChatGPT help for JavaScript "Explain at a beginner level how to create a JavaScript for a burger menu"
+
 // Select the elements using basic selectors
 let menuButton = document.querySelector("header button[aria-label='Menu']");
 let nav = document.querySelector("nav");

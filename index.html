@@ -6,16 +6,20 @@
     <title>Crumbl Homepage</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="indexPage">
     <header>
       <div>
+        <!-- 1 Menu icon (hamburger) toegevoegd op advies van ChatGPT -->
         <button aria-label="Menu">&#9776;</button>
+        <!-- 5 tabindex toegevoegd om p en headings focusable te maken voor toetsenbordnavigatie, gebaseerd op uitleg van MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex -->
         <h1 tabindex="0">crumbl</h1>
       </div>
       <a href="details.html">Order Now</a>
     </header>
 
+    <!-- 9 aria-expanded voor menu bar, bron: MDN https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded -->
     <nav aria-expanded="false">
+      <!-- 4 X-icon om menu te sluiten op basis van uitleg van Toolstud.io: https://toolstud.io/web/charmap.php?encoded=times&utm_content=cmp-true -->
       <button aria-label="Close Menu" tabindex="0">&times;</button>
       <ul>
         <li><a href="details.html">Sign in</a></li>
@@ -28,6 +32,7 @@
     </nav>
 
     <section>
+      <!-- 2 Video embed op basis van uitleg van MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video -->
       <video width="250" loop autoplay muted>
         <source
           src="https://crumbl.video/dfe68287-ce2a-4dd1-bf27-5d06f1efb9cc_FlavorVideo_09152024_JC_Vertical_V01_1.mp4"
@@ -115,7 +120,7 @@
         <p tabindex="0">Company</p>
         <p tabindex="0">Get Involved</p>
       </div>
-
+      <!-- 6 Social media links openen in een nieuw venster op basis van uitleg van HTML.com: https://html.com/attributes/a-target/#:~:text=browser%20specifies%20otherwise.-a%20target%3D%E2%80%9D_blank%E2%80%9D%20Open%20in%20New%20Browser%20Tab%20(,oder%20browsers)%20a%20new%20window. -->
       <div>
         <a href="https://facebook.com" target="_blank">
           <img
